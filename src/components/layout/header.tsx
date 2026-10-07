@@ -52,7 +52,12 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40">
-      <div className="relative border-b border-line/70 bg-ivory">
+      <div
+        className={cn(
+          "relative border-b border-line/60 transition-colors duration-500 ease-soft",
+          isSearchOpen ? "bg-ivory" : "bg-ivory/80 backdrop-blur-md",
+        )}
+      >
         <div className="container-page grid h-[72px] grid-cols-[1fr_auto_1fr] items-center lg:h-[88px]">
           <div className="flex items-center">
             <button
